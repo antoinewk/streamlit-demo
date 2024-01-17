@@ -1,0 +1,5 @@
+name: rag_webapp
+
+dependencies:
+  - python=3.11
+  - poetry=1.4.0

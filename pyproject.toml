@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "rag-webapp"
+version = "0.1.0"
+description = ""
+authors = ["antoinewk <antoine@della.ai>"]
+readme = "README.md"
+packages = [{include = "rag_webapp"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+streamlit = "^1.30.0"
+streamlit-elements = ">=0.1.0,<0.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
