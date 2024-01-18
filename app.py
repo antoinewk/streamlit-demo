@@ -27,7 +27,7 @@ def main():
         w = SimpleNamespace(
             dashboard=board,
             question=Question(board, 0, 0, 6, 3, minW=3, minH=3),
-            chunks=[Chunk(board, 0, 0, 6, 4) for i in range(3)],
+            chunks=[Chunk(board, 0, 0, 6, 3) for i in range(3)],
             pdfviewer=PdfViewer(board, 6, 0, 6, 15, minH=10),
             answer=Answer(board, 0, 12, 12, 3, minW=3, minH=3),
         )
@@ -35,12 +35,14 @@ def main():
     else:
         w = state.w
 
+    print("DEMO")
+
     with elements("demo"):
         event.Hotkey("ctrl+s", sync(), bindInputs=True, overrideDefault=True)
 
         with w.dashboard(rowHeight=57):
             w.question()
-            _ = [i("test") for i in w.chunks]
+            _ = [i() for i in w.chunks]
             w.pdfviewer()
             w.answer()
 
